@@ -1,4 +1,4 @@
-package com.kevin.tech.bottomnavigationbarforandroid.fragment;
+package com.fudd.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,12 +13,12 @@ import android.widget.TextView;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-import com.kevin.tech.bottomnavigationbarforandroid.Constants;
-import com.kevin.tech.bottomnavigationbarforandroid.R;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.HomeFragment;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.LikeFragment;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.LocationFragment;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.PersonFragment;
+import com.fudd.activity.R;
+import com.fudd.fragment.subfragment.HomeFragment;
+import com.fudd.fragment.subfragment.LikeFragment;
+import com.fudd.fragment.subfragment.LocationFragment;
+import com.fudd.fragment.subfragment.PersonFragment;
+import com.fudd.utils.Constants;
 
 /**
  * Created by Kevin on 2016/11/28.
@@ -39,7 +39,7 @@ public class NavigationFragment extends Fragment implements BottomNavigationBar.
     public static NavigationFragment newInstance(String s) {
         NavigationFragment navigationFragment = new NavigationFragment();
         Bundle bundle = new Bundle();
-        bundle.putString(Constants.ARGS, s);
+        bundle.putString(Constants.KEY_ARGS, s);
         navigationFragment.setArguments(bundle);
         return navigationFragment;
     }
@@ -51,9 +51,9 @@ public class NavigationFragment extends Fragment implements BottomNavigationBar.
         mTextView = (TextView) view.findViewById(R.id.activity_text_view);
         Bundle bundle = getArguments();
         if (bundle != null) {
-            String s = bundle.getString(Constants.ARGS);
+            String s = bundle.getString(Constants.KEY_ARGS);
             if (!TextUtils.isEmpty(s)) {
-                mTextView.setText(s);
+                mTextView.setText("");
             }
         }
         Log.d("Kevin", mTextView.getText().toString());
@@ -61,10 +61,10 @@ public class NavigationFragment extends Fragment implements BottomNavigationBar.
         mBottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
         mBottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
 
-        mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.home_fill, getString(R.string.item_home)).setInactiveIconResource(R.drawable.home).setActiveColorResource(R.color.colorPrimary).setInActiveColorResource(R.color.black_1))
-                .addItem(new BottomNavigationItem(R.drawable.location_fill, getString(R.string.item_location)).setInactiveIconResource(R.drawable.location).setActiveColorResource(R.color.colorPrimary).setInActiveColorResource(R.color.black_1))
-                .addItem(new BottomNavigationItem(R.drawable.like_fill, getString(R.string.item_like)).setInactiveIconResource(R.drawable.like).setActiveColorResource(R.color.colorPrimary).setInActiveColorResource(R.color.black_1))
-                .addItem(new BottomNavigationItem(R.drawable.person_fill, getString(R.string.item_person)).setInactiveIconResource(R.drawable.person).setActiveColorResource(R.color.colorPrimary).setInActiveColorResource(R.color.black_1))
+        mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.home_fill, getString(R.string.item_home)).setInactiveIconResource(R.drawable.home).setActiveColorResource(R.color.green).setInActiveColorResource(R.color.black_1))
+                .addItem(new BottomNavigationItem(R.drawable.location_fill, getString(R.string.item_location)).setInactiveIconResource(R.drawable.location).setActiveColorResource(R.color.green).setInActiveColorResource(R.color.black_1))
+                .addItem(new BottomNavigationItem(R.drawable.like_fill, getString(R.string.item_like)).setInactiveIconResource(R.drawable.like).setActiveColorResource(R.color.green).setInActiveColorResource(R.color.black_1))
+                .addItem(new BottomNavigationItem(R.drawable.person_fill, getString(R.string.item_person)).setInactiveIconResource(R.drawable.person).setActiveColorResource(R.color.green).setInActiveColorResource(R.color.black_1))
                 .setFirstSelectedPosition(0)
                 .initialise();
 

@@ -5,4 +5,13 @@
     <color name="colorAccent">#FF4081</color>
     <color name="black">#dd000000</color>
     <color name="white">#ffffffff</color>
+    <color name="orange">#FFC107</color>
+    <color name="green">#259B24</color>
+    <color name="purple">#9C27B0</color>
+    <color name="blue">#03A9F4</color>
+    <color name="lime">#CDDC39</color>
+    <color name="black_1">#333333</color>
+    <color name="huise">#FFBAB9BA</color>
+
+
 </resources>

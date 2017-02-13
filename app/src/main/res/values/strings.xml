@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">WelcomPage</string>
     <string name="entry">立即体验</string>
+    <string name="tab_one">Fish</string>
+    <string name="tab_two">Fly</string>
+    <string name="tab_three">Bird</string>
+    <string name="tab_four">Coffee</string>
+    <string name="tips">Hello</string>
+
+    <string name="item_home">首页</string>
+    <string name="item_location">工作</string>
+    <string name="item_like">喜欢</string>
+    <string name="item_person">我</string>
+
+    <string name="navigation_navigation_bar">NavigationBar</string>
+    <string name="navigation_radio_bar">RadioGroup</string>
+    <string name="navigation_tab_layout">TabLayout + ViewPager</string>
+    <string name="navigation_tab_layout2">TabLayout + ViewPager 2</string>
+    <string name="navigation_text_tab">TextView + LinearLayout</string>
+    <string name="navigation_tab_host">TabHost</string>
 </resources>
