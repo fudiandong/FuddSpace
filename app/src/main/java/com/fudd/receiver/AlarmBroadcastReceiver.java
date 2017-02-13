@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class AlarmBroadcastReceiver extends BroadcastReceiver {
     Uri ringUri;
-
+//http://blog.csdn.net/u012414584/article/details/44593727
     @Override
     public void onReceive(Context context, Intent intent) {
         String msg = intent.getStringExtra("msg");
