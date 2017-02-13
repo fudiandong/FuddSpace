@@ -13,9 +13,7 @@ import com.fudd.utils.Constants;
 
 
 /**
- * Created by Kevin on 2016/11/28.
- * Blog:http://blog.csdn.net/student9128
- * Description:
+ * Created by fudd 2017年2月13日 23:20:10
  */
 
 public class LocationFragment extends Fragment{
