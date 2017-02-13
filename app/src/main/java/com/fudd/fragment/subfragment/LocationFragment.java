@@ -14,6 +14,8 @@ import com.fudd.utils.Constants;
 
 /**
  * Created by fudd 2017年2月13日 23:20:10
+ *
+ * 闹铃管理类
  */
 
 public class LocationFragment extends Fragment{
@@ -28,11 +30,12 @@ public class LocationFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_sub_content, container, false);
-        Bundle bundle = getArguments();
-        String s = bundle.getString(Constants.KEY_ARGS);
-        TextView textView = (TextView) view.findViewById(R.id.fragment_text_view);
-        textView.setText(s);
+        View view = inflater.inflate(R.layout.fragment_location, container, false);
+//        Bundle bundle = getArguments();
+//        String s = bundle.getString(Constants.KEY_ARGS);
+//        TextView textView = (TextView) view.findViewById(R.id.fragment_text_view);
+//        textView.setText(s);
         return view;
     }
+
 }
