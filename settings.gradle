@@ -1,1 +1,1 @@
-include ':app', ':NavigationBar', ':SideMenu', ':library'
+include ':app', ':NavigationBar'
