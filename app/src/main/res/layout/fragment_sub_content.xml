@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="@string/tips"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/green"
         android:textSize="24sp"
         android:textStyle="bold"/>
 </RelativeLayout>
