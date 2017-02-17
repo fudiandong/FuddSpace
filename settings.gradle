@@ -1,1 +1,1 @@
-include ':app', ':NavigationBar', ':FragmentDemo'
+include ':app', ':NavigationBar', ':FragmentDemo', ':leakcanarystudy'
