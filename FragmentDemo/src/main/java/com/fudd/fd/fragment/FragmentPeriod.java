@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.fudd.fd.R;
@@ -15,9 +16,28 @@ import com.fudd.fd.R;
  * Created by cetc1 on 2017-2-16.
  */
 
-public class FragmentPeriod extends Fragment {
+public class FragmentPeriod extends Fragment implements View.OnClickListener {
+    private Button button;
+    private Bundle bundle;
+    private FragmentPeriodBtnClickListener fragmentPeriodBtnClickListener;
 
-    private  Bundle bundle;
+    @Override
+    public void onClick(View v) {
+        if (fragmentPeriodBtnClickListener != null){
+            fragmentPeriodBtnClickListener.onFragmentPeriodBtnClick();
+        }
+    }
+
+    public interface FragmentPeriodBtnClickListener{
+        void onFragmentPeriodBtnClick();
+
+    }
+
+    public void setFragmentPeriodBtnClickListener(FragmentPeriodBtnClickListener listener){
+        this.fragmentPeriodBtnClickListener = listener;
+    }
+
+
 
     // 保存临时数据的方法
     private Bundle saveState(){
@@ -132,6 +152,9 @@ public class FragmentPeriod extends Fragment {
         Log.e(TAG,"onCreateView");
         View view = inflater.inflate(R.layout.fragment_one,container,false);
         editText = (EditText) view.findViewById(R.id.edittext);
+
+        button = (Button) view.findViewById(R.id.button);
+        button.setOnClickListener(this);
 //        if (savedInstanceState.getString("tx") != null){
 //
 //        }

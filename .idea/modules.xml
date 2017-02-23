@@ -6,7 +6,11 @@
       <module fileurl="file://$PROJECT_DIR$/FuddSpace.iml" filepath="$PROJECT_DIR$/FuddSpace.iml" />
       <module fileurl="file://$PROJECT_DIR$/NavigationBar/NavigationBar.iml" filepath="$PROJECT_DIR$/NavigationBar/NavigationBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databindingstudy/databindingstudy.iml" filepath="$PROJECT_DIR$/databindingstudy/databindingstudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guidepagedemo/guidepagedemo.iml" filepath="$PROJECT_DIR$/guidepagedemo/guidepagedemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/leakcanarystudy/leakcanarystudy.iml" filepath="$PROJECT_DIR$/leakcanarystudy/leakcanarystudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabView/tabView.iml" filepath="$PROJECT_DIR$/tabView/tabView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabviewlibrary/tabviewlibrary.iml" filepath="$PROJECT_DIR$/tabviewlibrary/tabviewlibrary.iml" />
     </modules>
   </component>
 </project>

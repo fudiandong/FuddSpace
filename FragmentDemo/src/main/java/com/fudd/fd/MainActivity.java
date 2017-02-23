@@ -12,29 +12,43 @@ import android.view.Window;
 import com.fudd.fd.fragment.FragmentOne;
 import com.fudd.fd.fragment.FragmentOneRefactor;
 import com.fudd.fd.fragment.FragmentPeriod;
+import com.fudd.fd.fragment.FragmentStudy;
 import com.fudd.fd.fragment.FragmentThree;
 import com.fudd.fd.fragment.FragmentTwoRefactor;
 
-public class MainActivity extends Activity implements FragmentTwoRefactor.FragmentTwoBtnClickListener,FragmentOneRefactor.FragmentOneBtnClickListener{
+public class MainActivity extends Activity implements FragmentStudy.FragmentStudyBtnListener, FragmentPeriod.FragmentPeriodBtnClickListener, FragmentTwoRefactor.FragmentTwoBtnClickListener,FragmentOneRefactor.FragmentOneBtnClickListener{
 
+    private static final String TAG = "MainActivity";
     private FragmentOneRefactor fragmentOneRefactor;
     private FragmentTwoRefactor fragmentTwoRefactor;
     private FragmentThree fragmentThree;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-        Log.e("FragmentPeriod",savedInstanceState+"");
         if (savedInstanceState == null){
 //            setFragmentA();
-            Log.e("FragmentPeriod",savedInstanceState+"－－－－－－－－－－－－");
-            setFragmentB();
+//            setFragmentB();
+            setFragmentC();
+
         }
 
 
     }
+
+    private void setFragmentC(){
+        Log.e(TAG,"setFragmentC");
+        FragmentStudy fragmentStudy = new FragmentStudy();
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.id_content,fragmentStudy,"study");
+        fragmentTransaction.commit();
+
+    }
+
 
     private void setFragmentB() {
         FragmentPeriod fragmentPeriod = new FragmentPeriod();
@@ -79,5 +93,16 @@ public class MainActivity extends Activity implements FragmentTwoRefactor.Fragme
         fragmentTransaction.add(R.id.id_content,fragmentTwoRefactor,"two");
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onFragmentPeriodBtnClick() {
+        Log.d("ff","---------");
+//        onFragmentOneBtnClick();
+    }
+
+    @Override
+    public void onFragmentStudyBtnClick() {
+        Log.e(TAG,"onFragmentStudyBtnClick");
     }
 }

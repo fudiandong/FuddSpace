@@ -1,1 +1,1 @@
-include ':app', ':NavigationBar', ':FragmentDemo', ':leakcanarystudy'
+include ':app', ':NavigationBar', ':FragmentDemo', ':leakcanarystudy', ':guidepagedemo', ':tabviewlibrary', ':tabView', ':databindingstudy'

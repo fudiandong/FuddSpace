@@ -3,10 +3,12 @@ package com.fudd.fd.fragment;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.fudd.fd.R;
 
@@ -24,6 +26,7 @@ public class FragmentOneRefactor extends Fragment implements View.OnClickListene
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.d("ff","onCreateView");
         View view = inflater.inflate(R.layout.fragment_one,container,false);
         button = (Button)view.findViewById(R.id.button);
         button.setOnClickListener(this);
@@ -32,6 +35,8 @@ public class FragmentOneRefactor extends Fragment implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
+        Log.d("ff","33333");
+        Toast.makeText(getActivity().getApplicationContext(),"5555",Toast.LENGTH_SHORT).show();
         if (getActivity() instanceof FragmentOneBtnClickListener ){
             ((FragmentOneBtnClickListener) getActivity()).onFragmentOneBtnClick();
         }
