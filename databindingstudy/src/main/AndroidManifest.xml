@@ -12,7 +12,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.BasicActivity" android:label="BasicActivity"/>
-        <activity android:name=".activity.CustomBindingActivity" android:label="BasicActivity"/>
+        <activity android:name=".activity.CustomBindingActivity" android:label="CustomBindingActivity"/>
+        <activity android:name=".activity.IncludeActivity" android:label="IncludeActivity"/>
     </application>
 
 </manifest>

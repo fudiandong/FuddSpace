@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="user"
+            type="com.fudd.databindingstudy.model.User"/>
+        <variable
+            name="listener"
+            type="com.fudd.databindingstudy.interfaces.BtnListener"/>
+        <variable
+            name="text"
+            type="String"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include android:id="@+id/layout_input"
+            layout="@layout/layout_input"/>
+        <include layout="@layout/layout_user"
+            binding:user="@{user}"
+            />
+        <include layout="@layout/layout_btn"
+            binding:btnText="@{text}"
+            binding:listener="@{listener}"/>
+
+    </LinearLayout>
+</layout>

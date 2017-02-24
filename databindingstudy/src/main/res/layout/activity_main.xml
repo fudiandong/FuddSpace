@@ -33,7 +33,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:text="three"
+        android:text="IncludeBinding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button3"
