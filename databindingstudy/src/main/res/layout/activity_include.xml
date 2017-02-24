@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:binding="http://schemas.android.com/apk/res-auto">
+    xmlns:myyu="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -22,11 +22,11 @@
         <include android:id="@+id/layout_input"
             layout="@layout/layout_input"/>
         <include layout="@layout/layout_user"
-            binding:user="@{user}"
+            myyu:user="@{user}"
             />
         <include layout="@layout/layout_btn"
-            binding:btnText="@{text}"
-            binding:listener="@{listener}"/>
+            myyu:btnText="@{text}"
+            myyu:listener="@{listener}"/>
 
     </LinearLayout>
 </layout>

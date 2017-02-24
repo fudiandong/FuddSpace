@@ -21,10 +21,12 @@ import com.fudd.databindingstudy.model.User;
  */
 
 public class IncludeActivity extends BaseActivity implements BtnListener {
+
+    private ActivityIncludeBinding binding;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final ActivityIncludeBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_include);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_include);
         binding.setListener(this);
         binding.setText("to toast");
         binding.layoutInput.etName.addTextChangedListener(new TextWatcher() {
