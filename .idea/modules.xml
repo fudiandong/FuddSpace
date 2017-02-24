@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/databindingstudy/databindingstudy.iml" filepath="$PROJECT_DIR$/databindingstudy/databindingstudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/guidepagedemo/guidepagedemo.iml" filepath="$PROJECT_DIR$/guidepagedemo/guidepagedemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/livesteward/livesteward.iml" filepath="$PROJECT_DIR$/livesteward/livesteward.iml" />
       <module fileurl="file://$PROJECT_DIR$/tabView/tabView.iml" filepath="$PROJECT_DIR$/tabView/tabView.iml" />
       <module fileurl="file://$PROJECT_DIR$/tabviewlibrary/tabviewlibrary.iml" filepath="$PROJECT_DIR$/tabviewlibrary/tabviewlibrary.iml" />
     </modules>

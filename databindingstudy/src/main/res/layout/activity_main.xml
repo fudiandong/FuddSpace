@@ -45,7 +45,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:text="fours"
+        android:text="Collection_Binding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button4"
