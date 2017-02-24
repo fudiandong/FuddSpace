@@ -12,6 +12,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.BasicActivity" android:label="BasicActivity"/>
+        <activity android:name=".activity.CustomBindingActivity" android:label="BasicActivity"/>
     </application>
 
 </manifest>

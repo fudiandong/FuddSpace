@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.fudd.databindingstudy.activity.BasicActivity;
+import com.fudd.databindingstudy.activity.CustomBindingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, BasicActivity.class));
     }
     public void  btnTwo(View view){
-        Toast.makeText(getApplicationContext(),"Two",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getApplicationContext(),"Two",Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, CustomBindingActivity.class));
     }
     public void  btnThree(View view){
         Toast.makeText(getApplicationContext(),"Three",Toast.LENGTH_SHORT).show();
