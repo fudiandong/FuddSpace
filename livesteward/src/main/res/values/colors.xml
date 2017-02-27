@@ -14,4 +14,7 @@
     <color name="black_1">#333333</color>
     <color name="huise">#FFBAB9BA</color>
     <color name="grey_300">#E0E0E0</color>
+
+    <color name="colorTheme">#0839ea</color>
+    <color name="colorPageBg">#f2f4f5</color>
 </resources>

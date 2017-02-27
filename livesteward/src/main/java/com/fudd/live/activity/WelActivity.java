@@ -14,6 +14,8 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.fudd.live.activity.databinding.ActivityWelBinding;
+import com.fudd.live.utils.Contants;
+import com.fudd.live.utils.SharedPreferencesUtil;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -30,12 +32,21 @@ public class WelActivity extends AppCompatActivity {
 
     ImageView mIVEntry ;
 
-    private static final int[] Imgs = {R.drawable.wel1,R.drawable.welcoming4,R.drawable.welcoming5};
+    private static final int[] Imgs = {R.drawable.welcomimg1,R.drawable.welcomimg2,R.drawable.welcomimg3,R.drawable.welcoming4,R.drawable.welcoming5};
 
     // 华为云 301199
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // 判断是否是第一次开启应用
+        boolean isFirstOpen = SharedPreferencesUtil.getBoolean(this, Contants.FIRST_OPEN,true);
+        // 如果是第一次启动，则先进入功能引导页
+        if (isFirstOpen){
+            Intent intent = new Intent(this,GuideActivity.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
 
         binding = DataBindingUtil.setContentView(this,R.layout.activity_wel);
         mIVEntry = (ImageView) findViewById(R.id.iv_entry);
@@ -45,8 +56,8 @@ public class WelActivity extends AppCompatActivity {
         Drawable drawable = resources.getDrawable(Imgs[index]);
 
         binding.setImg(drawable);
-        binding.setHi("今天星期六了！");
-        binding.setTime("早上好，付先生！");
+//        binding.setHi("今天星期六了！");
+        binding.setTime("欢迎使用!");
 
         startMainActivity();
 

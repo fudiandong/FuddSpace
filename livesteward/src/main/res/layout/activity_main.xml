@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hello"/>
-    <ImageView
-        android:id="@+id/iv_entry"
+    <android.support.v4.widget.DrawerLayout
+        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/wel1"/>
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/include"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_bar_main"
+            />
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/colorPageBg"
+            android:clickable="true"
+            android:fitsSystemWindows="true" />
+    </android.support.v4.widget.DrawerLayout>
 
-</LinearLayout>
+</layout>
