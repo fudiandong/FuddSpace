@@ -1,1 +1,1 @@
-include ':app', ':NavigationBar', ':FragmentDemo', ':guidepagedemo', ':tabviewlibrary', ':tabView', ':databindingstudy', ':livesteward'
+include ':app', ':NavigationBar', ':guidepagedemo', ':tabviewlibrary', ':tabView', ':databindingstudy', ':livesteward', ':chenjin', ':studydemo'

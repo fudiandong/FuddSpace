@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FragmentDemo/FragmentDemo.iml" filepath="$PROJECT_DIR$/FragmentDemo/FragmentDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/FuddSpace.iml" filepath="$PROJECT_DIR$/FuddSpace.iml" />
       <module fileurl="file://$PROJECT_DIR$/NavigationBar/NavigationBar.iml" filepath="$PROJECT_DIR$/NavigationBar/NavigationBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chenjin/chenjin.iml" filepath="$PROJECT_DIR$/chenjin/chenjin.iml" />
       <module fileurl="file://$PROJECT_DIR$/databindingstudy/databindingstudy.iml" filepath="$PROJECT_DIR$/databindingstudy/databindingstudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/guidepagedemo/guidepagedemo.iml" filepath="$PROJECT_DIR$/guidepagedemo/guidepagedemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/livesteward/livesteward.iml" filepath="$PROJECT_DIR$/livesteward/livesteward.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studydemo/studydemo.iml" filepath="$PROJECT_DIR$/studydemo/studydemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/tabView/tabView.iml" filepath="$PROJECT_DIR$/tabView/tabView.iml" />
       <module fileurl="file://$PROJECT_DIR$/tabviewlibrary/tabviewlibrary.iml" filepath="$PROJECT_DIR$/tabviewlibrary/tabviewlibrary.iml" />
     </modules>
