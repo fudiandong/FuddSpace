@@ -15,6 +15,7 @@
     <color name="huise">#FFBAB9BA</color>
     <color name="grey_300">#E0E0E0</color>
 
-    <color name="colorTheme">#0839ea</color>
-    <color name="colorPageBg">#f41008</color>
+    <!--<color name="colorTheme">#0839ea</color>-->
+    <color name="colorTheme">#ffce3d3a</color>
+    <color name="colorPageBg">#f2f4f5</color>
 </resources>

@@ -6,15 +6,22 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.fudd.live.activity.databinding.ActivityMainBinding;
+import com.fudd.live.utils.StatusBarUtil;
 
 /**
  * Created by Nordpol on 2017/2/25 0025.
@@ -22,37 +29,70 @@ import com.fudd.live.activity.databinding.ActivityMainBinding;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private ActivityMainBinding binding;
+    private ActivityMainBinding mBinding;
     private FrameLayout llTitleMenu;
     private DrawerLayout drawerLayout;
+    private NavigationView navView;
+    private Toolbar toolbar;
+    private FloatingActionButton fab;
+    private ViewPager vpContent;
+
+    // 工具栏的三个图标
+    private ImageView llTitleGank;
+    private ImageView llTitleOne;
+    private ImageView llTitleDou;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        mBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        // 初始化视图
+        initId();
+        StatusBarUtil.setColorNoTranslucentForDrawerLayout(MainActivity.this, drawerLayout, getResources().getColor(R.color.colorTheme));
+        // 设置沉浸式状态栏
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+//            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+//            if(Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP){
+//                //将侧边栏顶部延伸至status bar
+//                drawerLayout.setFitsSystemWindows(true);
+//                //将主页面顶部延伸至status bar;虽默认为false,但经测试,DrawerLayout需显示设置
+//                drawerLayout.setClipToPadding(false);
+//            }
+//        }
+    }
 
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+    /**
+     * 初始化视图
+     */
+    private void initId() {
+        // llTitleMenu  为menu图标的父布局  菜单
+        llTitleMenu = mBinding.include.llTitleMenu;
+        // 侧滑栏
+        drawerLayout = mBinding.drawerLayout;
+        // 导航布局
+        navView = mBinding.navView;
+        // 工具栏
+        toolbar = mBinding.include.toolbar;
+        // 邮件图标
+        fab = mBinding.include.fab;
+        // ViewPager
+        vpContent = mBinding.include.vpContent;
 
-        llTitleMenu = binding.include.llTitleMenu;
-        drawerLayout = binding.drawerLayout;
+        // 工具栏三个 ImageView 图标
+        llTitleOne = mBinding.include.ivTitleOne;
+        llTitleDou = mBinding.include.ivTitleDou;
+        llTitleGank = mBinding.include.ivTitleGank;
+
+
         llTitleMenu.setOnClickListener(this);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
-            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
-            if(Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP){
-                //将侧边栏顶部延伸至status bar
-                drawerLayout.setFitsSystemWindows(true);
-                //将主页面顶部延伸至status bar;虽默认为false,但经测试,DrawerLayout需显示设置
-                drawerLayout.setClipToPadding(false);
-            }
-        }
     }
 
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.ll_title_menu){
-//            Toast.makeText(getApplicationContext(),"老婆，我爱你！",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),StatusBarUtil.getStatusBarHeight(getBaseContext())+"",Toast.LENGTH_LONG).show();
             drawerLayout.openDrawer(GravityCompat.START);
         }
 
