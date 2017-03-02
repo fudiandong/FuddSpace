@@ -46,20 +46,27 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
-        // 初始化视图
+        // 　初始化视图
         initId();
+        // 　设置沉浸式状态栏
         StatusBarUtil.setColorNoTranslucentForDrawerLayout(MainActivity.this, drawerLayout, getResources().getColor(R.color.colorTheme));
-        // 设置沉浸式状态栏
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
-//            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+//        if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.KITKAT) {
+//            WindowManager.LayoutParams localLayoutParams
+//                    = getWindow().getAttributes();
+//            localLayoutParams.flags =
+//                    (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
+//                            | localLayoutParams.flags);
 //            if(Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP){
-//                //将侧边栏顶部延伸至status bar
 //                drawerLayout.setFitsSystemWindows(true);
-//                //将主页面顶部延伸至status bar;虽默认为false,但经测试,DrawerLayout需显示设置
 //                drawerLayout.setClipToPadding(false);
 //            }
 //        }
+        //   初始化侧滑栏NavigationView
+        initNavigationView();
+    }
+
+    private void initNavigationView() {
+//        navView.inflateHeaderView(R.layout.nav_header_main);
     }
 
     /**
@@ -83,16 +90,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
         llTitleOne = mBinding.include.ivTitleOne;
         llTitleDou = mBinding.include.ivTitleDou;
         llTitleGank = mBinding.include.ivTitleGank;
-
-
+        // 暂时禁用 右下角 邮件图标
+        fab.setVisibility(View.GONE);
         llTitleMenu.setOnClickListener(this);
+
     }
 
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.ll_title_menu){
-            Toast.makeText(getApplicationContext(),StatusBarUtil.getStatusBarHeight(getBaseContext())+"",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(),StatusBarUtil.getStatusBarHeight(getBaseContext())+"",Toast.LENGTH_LONG).show();
             drawerLayout.openDrawer(GravityCompat.START);
         }
 

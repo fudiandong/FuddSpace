@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group >
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home2"
+            android:title="我的主页"/>
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/work_selected"
+            android:title="个人中心"/>
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/share_selected"
+            android:title="分享应用"/>
+        <item
+            android:id="@+id/nav_discussion"
+            android:icon="@drawable/service_selected"
+            android:title="问题反馈"/>
+    </group>
+
+    <item android:title="关于本应用">
+        <menu>
+            <item
+                android:icon="@drawable/setting_selected"
+                android:title="设置"/>
+            <item
+                android:icon="@drawable/exit_selected"
+                android:title="退出"/>
+        </menu>
+    </item>
+
+</menu>

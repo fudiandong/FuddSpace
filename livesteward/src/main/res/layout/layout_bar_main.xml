@@ -76,7 +76,7 @@
                 android:id="@+id/vp_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorWhite"
+                android:background="@color/white"
                 android:descendantFocusability="blocksDescendants" /><!-- 定义和其子控件两者之间的关系为：会覆盖子类控件而直接获得焦点。-->
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab"

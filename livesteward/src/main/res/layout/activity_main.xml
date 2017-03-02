@@ -22,6 +22,8 @@
             android:layout_gravity="start"
             android:background="@color/colorPageBg"
             android:clickable="true"
+            app:headerLayout="@layout/nav_header_main"
+            app:menu="@menu/menu_drawer"
             android:fitsSystemWindows="true" />
 
         <!--app:headerLayout="@layout/nav_header_main"-->

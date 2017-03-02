@@ -55,7 +55,6 @@ public class StatusBarUtil {
         } else {
             activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
-
         // 获取内容布局
         ViewGroup contentLayout = (ViewGroup) drawerLayout.getChildAt(0);
         if (contentLayout.getChildCount() > 0 && contentLayout.getChildAt(0) instanceof StatusBarView){
@@ -97,7 +96,6 @@ public class StatusBarUtil {
     public static int getStatusBarHeight(Context context) {
         // 获得状态栏高度
         int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
-
         return context.getResources().getDimensionPixelSize(resourceId);
     }
 
