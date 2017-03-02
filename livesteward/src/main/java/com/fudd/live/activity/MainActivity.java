@@ -13,6 +13,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -103,6 +105,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //            Toast.makeText(getApplicationContext(),StatusBarUtil.getStatusBarHeight(getBaseContext())+"",Toast.LENGTH_LONG).show();
             drawerLayout.openDrawer(GravityCompat.START);
         }
-
     }
+
 }
