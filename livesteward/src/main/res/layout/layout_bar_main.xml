@@ -31,7 +31,7 @@
                     android:layout_width="23dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/titlebar_menu" />
+                    android:src="@drawable/titlebar_menu_main" />
             </FrameLayout>
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -49,22 +49,26 @@
                         android:layout_width="55dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:padding="12dp"
+                        android:clickable="true"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:src="@drawable/titlebar_disco" />
+                        android:src="@drawable/titlebar_home" />
 
                     <ImageView
                         android:id="@+id/iv_title_one"
                         android:layout_width="55dp"
                         android:layout_height="match_parent"
+                        android:padding="12dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:src="@drawable/titlebar_music" />
+                        android:src="@drawable/titlebar_share" />
 
                     <ImageView
                         android:id="@+id/iv_title_dou"
                         android:layout_width="55dp"
                         android:layout_height="match_parent"
+                        android:padding="12dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:src="@drawable/titlebar_friends" />
+                        android:src="@drawable/titlebar_work" />
 
                 </LinearLayout>
             </HorizontalScrollView>

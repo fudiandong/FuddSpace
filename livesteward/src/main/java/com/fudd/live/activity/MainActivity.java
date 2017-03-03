@@ -20,9 +20,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.fudd.live.activity.databinding.ActivityMainBinding;
+import com.fudd.live.utils.ImageUtil;
 import com.fudd.live.utils.StatusBarUtil;
 
 /**
@@ -65,10 +67,35 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //        }
         //   初始化侧滑栏NavigationView
         initNavigationView();
+        initContentFragment();
+    }
+
+    private void initContentFragment() {
+
+
+
     }
 
     private void initNavigationView() {
         navView.inflateHeaderView(R.layout.nav_header_main);
+        View headerView = navView.getHeaderView(0);
+        //　获取头像imageview
+        ImageView imageView = (ImageView) headerView.findViewById(R.id.iv_avatar);
+        //  将头像设置为圆形
+        ImageUtil.displayCircle(imageView,R.drawable.welcoming4);
+        LinearLayout navHome = (LinearLayout) headerView.findViewById(R.id.nav_ll_home);
+        LinearLayout navWork = (LinearLayout) headerView.findViewById(R.id.nav_ll_work);
+        LinearLayout navHelp = (LinearLayout) headerView.findViewById(R.id.nav_ll_help);
+        LinearLayout navService = (LinearLayout) headerView.findViewById(R.id.nav_ll_service);
+        LinearLayout navSetting = (LinearLayout) headerView.findViewById(R.id.nav_ll_setting);
+        LinearLayout navExit = (LinearLayout) headerView.findViewById(R.id.nav_ll_exit);
+
+        navHome.setOnClickListener(this);
+        navWork.setOnClickListener(this);
+        navHelp.setOnClickListener(this);
+        navService.setOnClickListener(this);
+        navSetting.setOnClickListener(this);
+        navExit.setOnClickListener(this);
     }
 
     /**
