@@ -20,5 +20,6 @@
     <color name="colorPageBg">#f2f4f5</color>
     <!--透明色-->
     <color name="colorTransparent">#00000000</color>
+    <color name="drawItemBg">#d9d9d9</color>
 
 </resources>

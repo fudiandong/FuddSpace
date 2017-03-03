@@ -68,7 +68,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     private void initNavigationView() {
-//        navView.inflateHeaderView(R.layout.nav_header_main);
+        navView.inflateHeaderView(R.layout.nav_header_main);
     }
 
     /**
