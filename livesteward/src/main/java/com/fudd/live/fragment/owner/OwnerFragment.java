@@ -2,6 +2,7 @@ package com.fudd.live.fragment.owner;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +16,12 @@ import com.fudd.live.fragment.BaseFragment;
  * Description:
  */
 
-public class OwnerFragment extends BaseFragment {
+public class OwnerFragment extends Fragment {
 
-    @Override
-    public int setContent() {
-        return 0;
-    }
+//    @Override
+//    public int setContent() {
+//        return 0;
+//    }
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

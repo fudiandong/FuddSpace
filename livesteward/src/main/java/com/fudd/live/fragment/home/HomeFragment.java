@@ -2,6 +2,7 @@ package com.fudd.live.fragment.home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,7 @@ import com.fudd.live.fragment.BaseFragment;
  * Description:
  */
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends Fragment {
 
     @Nullable
     @Override
@@ -24,9 +25,9 @@ public class HomeFragment extends BaseFragment {
         View view =inflater.inflate(R.layout.fragment_home,container,false);
         return view;
     }
-
-    @Override
-    public int setContent() {
-        return R.layout.fragment_home;
-    }
+//
+//    @Override
+//    public int setContent() {
+//        return R.layout.fragment_home;
+//    }
 }
