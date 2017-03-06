@@ -45,7 +45,7 @@
                     app:theme="@style/AppTheme">
 
                     <ImageView
-                        android:id="@+id/iv_title_gank"
+                        android:id="@+id/iv_title_home"
                         android:layout_width="55dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -55,7 +55,7 @@
                         android:src="@drawable/titlebar_home" />
 
                     <ImageView
-                        android:id="@+id/iv_title_one"
+                        android:id="@+id/iv_title_live"
                         android:layout_width="55dp"
                         android:layout_height="match_parent"
                         android:padding="12dp"
@@ -64,7 +64,7 @@
                         android:src="@drawable/titlebar_share" />
 
                     <ImageView
-                        android:id="@+id/iv_title_dou"
+                        android:id="@+id/iv_title_owner"
                         android:layout_width="55dp"
                         android:layout_height="match_parent"
                         android:padding="12dp"
