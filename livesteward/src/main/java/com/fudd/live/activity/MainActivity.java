@@ -76,6 +76,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //   初始化侧滑栏NavigationView
         initNavigationView();
         initContentFragment();
+        initListener();
+    }
+
+    private void initListener() {
+        llTitleMenu.setOnClickListener(this);
+        mBinding.include.ivTitleHome.setOnClickListener(this);
+        mBinding.include.ivTitleLive.setOnClickListener(this);
+        mBinding.include.ivTitleOwner.setOnClickListener(this);
+        fab.setOnClickListener(this);
     }
 
     private void initContentFragment() {
@@ -146,16 +155,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         llTitleOwner = mBinding.include.ivTitleOwner;
         // 暂时禁用 右下角 邮件图标
         fab.setVisibility(View.GONE);
-        llTitleMenu.setOnClickListener(this);
-
     }
 
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.ll_title_menu){
-//            Toast.makeText(getApplicationContext(),StatusBarUtil.getStatusBarHeight(getBaseContext())+"",Toast.LENGTH_LONG).show();
-            drawerLayout.openDrawer(GravityCompat.START);
+        switch (v.getId()){
+            case R.id.ll_title_menu:
+                drawerLayout.openDrawer(GravityCompat.START);
+                break;
+            case R.id.iv_title_home:
+                if (vpContent.getCurrentItem() != 0){
+                    llTitleHome.setSelected(true);
+                    llTitleLive.setSelected(false);
+                    llTitleOwner.setSelected(false);
+                    vpContent.setCurrentItem(0);
+                }
+                break;
+            case R.id.iv_title_live:
+                if (vpContent.getCurrentItem() != 1){
+                    llTitleHome.setSelected(false);
+                    llTitleLive.setSelected(true);
+                    llTitleOwner.setSelected(false);
+                    vpContent.setCurrentItem(1);
+                }
+                break;
+            case R.id.iv_title_owner:
+                if (vpContent.getCurrentItem() != 2){
+                    llTitleHome.setSelected(false);
+                    llTitleLive.setSelected(false);
+                    llTitleOwner.setSelected(true);
+                    vpContent.setCurrentItem(2);
+                }
+                break;
+            case R.id.nav_ll_exit:
+                finish();
+                break;
+            default:
+                break;
         }
     }
 
