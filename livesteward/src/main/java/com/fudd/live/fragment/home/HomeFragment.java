@@ -24,4 +24,9 @@ public class HomeFragment extends BaseFragment {
         View view =inflater.inflate(R.layout.fragment_home,container,false);
         return view;
     }
+
+    @Override
+    public int setContent() {
+        return R.layout.fragment_home;
+    }
 }

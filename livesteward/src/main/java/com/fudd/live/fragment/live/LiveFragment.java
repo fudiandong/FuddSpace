@@ -17,12 +17,17 @@ import com.fudd.live.fragment.BaseFragment;
 
 public class LiveFragment extends BaseFragment {
 
+    @Override
+    public int setContent() {
+        return 0;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-
-
         return super.onCreateView(inflater, container, savedInstanceState);
     }
+
+
 }
