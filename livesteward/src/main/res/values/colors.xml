@@ -16,7 +16,8 @@
     <color name="grey_300">#E0E0E0</color>
 
     <!--<color name="colorTheme">#0839ea</color>-->
-    <color name="colorTheme">#ffce3d3a</color>
+    <!--<color name="colorTheme">#ffce3d3a</color>-->
+    <color name="colorTheme">#4351e7</color>
     <color name="colorPageBg">#f2f4f5</color>
     <!--透明色-->
     <color name="colorTransparent">#00000000</color>
